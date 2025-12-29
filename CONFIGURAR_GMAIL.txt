@@ -1,0 +1,64 @@
+# ===================================
+# OPCIÓN 1: GMAIL (Para producción)
+# ===================================
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=tu_correo@gmail.com
+MAIL_PASSWORD=tu_contraseña_de_aplicacion_de_16_digitos
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=tu_correo@gmail.com
+MAIL_FROM_NAME="SFA Sistema"
+
+# ===================================
+# OPCIÓN 2: MAILTRAP (Para desarrollo/pruebas) ⭐ RECOMENDADO
+# ===================================
+
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=tu_username_de_mailtrap
+MAIL_PASSWORD=tu_password_de_mailtrap
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=noreply@sfa.test
+MAIL_FROM_NAME="SFA Sistema"
+
+# ===================================
+# CÓMO USAR MAILTRAP (GRATIS Y FÁCIL)
+# ===================================
+
+# 1. Ve a: https://mailtrap.io/
+# 2. Crea cuenta gratis (con Google)
+# 3. Ve a "Email Testing" → "Inboxes"
+# 4. Haz click en tu inbox
+# 5. Ve a "SMTP Settings"
+# 6. Copia:
+#    - Host: sandbox.smtp.mailtrap.io
+#    - Port: 2525
+#    - Username: (lo ves ahí)
+#    - Password: (lo ves ahí)
+# 7. Pega en tu .env
+# 8. Ejecuta: php artisan config:cache
+
+# ===================================
+# VENTAJAS DE MAILTRAP
+# ===================================
+
+# ✅ No necesitas configurar Gmail
+# ✅ No necesitas contraseña de aplicación
+# ✅ Gratis para desarrollo
+# ✅ Cuenta con 100 emails al mes
+# ✅ Los emails NO se envían realmente (perfectos para pruebas)
+# ✅ Puedes ver todos los emails en tu dashboard
+# ✅ Setup en 2 minutos
+
+# ===================================
+# DESPUÉS DE CONFIGURAR
+# ===================================
+
+# Ejecuta estos comandos:
+# php artisan config:cache
+# php artisan config:clear
+
+# O simplemente: php artisan optimize:clear
